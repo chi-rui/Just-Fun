@@ -1,0 +1,136 @@
+@font-face {
+    font-family: w;
+    src: url("../asset/YenHeavyFont.ttf") format('truetype');
+}
+html, body{
+	height: 100vh;
+	overflow-y: hidden;
+	font-family: w;
+}
+#app{
+	height: 100%;
+	margin: 0;
+}
+.animateBg{
+	height: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #f00;
+	-webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+	-webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+	animation-name: example;
+	animation-duration: 4s;
+	animation-iteration-count: infinite;
+	-webkit-animation-timing-function: linear;
+}
+@keyframes example {
+    0%   {background-color: rgba(255,0,0,0.75);}
+    33%  {background-color: rgba(0,255,0,0.75);}
+    67%  {background-color: rgba(0,0,255,0.75);}
+    100% {background-color: rgba(255,0,0,0.75);}
+}
+.loginBlock{
+	width: 50%;
+	height: 30%;
+	background-color: #000;
+	border-radius: 15px;
+}
+.logo{
+	/*margin-top: 15px;*/
+	height: 175px;
+	width: auto;
+	display: inline-block;
+	position: absolute;
+	top: 15px;
+	left: 15px;
+}
+.container{
+	height: calc(100% - 150px);
+	width: 100%;	
+	position: relative;
+	margin: 0;
+}
+.gameList{
+	/*height: 100%;*/
+	width: auto;
+	margin: 0;
+	list-style: none;
+	display: inline-block;
+	text-align: right;
+	position: absolute;
+	top: 15px;
+	right: 20px;
+}
+.gameList > li{
+	/*height: 50px;*/
+	/*line-height: 20px;*/
+	width: 55px;
+	height: 125px;
+	margin-right: 25px;
+	vertical-align: top;
+	display: inline-block;
+	background-image: url(../asset/OX1.png);
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+.gameList > li:hover{
+	background-image: url(../asset/OX2.png);
+	cursor: pointer;
+}
+.gameList > li:hover > a{
+	text-decoration: none;
+	color: #fff;
+}
+.gameList > li > a{
+	font-size: 20px;
+	color: #f00;
+	text-align: center;
+	writing-mode: vertical-lr;
+	padding-right: 15.5px;
+	padding-top: 10px;
+}
+.gameList > li > a:focus{
+	text-decoration: none;
+}
+.notebook{
+	background-image: url('../asset/book.png');
+	height: 550px;
+	width: 1000px;
+	background-size: 100% 97.5%;
+	background-repeat: no-repeat;
+	margin: 0px auto 0px auto;
+}
+.home{
+	position: absolute;
+	top: 200px;
+	left: calc(50vw + 100px);
+}
+.AB{
+	margin: 0 auto 0 auto;
+}
+.OX{
+	margin: 0 auto 0 auto;
+	height: 100%;
+}
+.left{
+	position: absolute;
+	left: calc(50% - 475px);
+	top: 200px;
+}
+.right{
+	position: absolute;
+	left: calc(50vw + 100px);
+	top: 200px;
+}
+tr{
+	border: 5px solid #000;
+	height: 125px;
+}
+td{
+	border: 5px solid #000;
+	width: 125px;
+	text-align: center;
+	font-size: 100px;
+	color: #00f;
+}
