@@ -134,11 +134,12 @@ function ABGame(state = abData, action){
 	switch(action.type){
 		case AB_GUESS:
 			var userInput = state.lastNum;
+			console.log(userInput)
 			if( userInput == ""){
 				window.alert("阿阿阿你忘記輸入數字了阿阿阿！");
 				return state;
-			}else if(userInput.length != 4){
-				window.alert("要四位數喔~");
+			}else if(userInput.length != 4 || isNaN(userInput)){
+				window.alert("要四位數字喔~");
 				return state;
 			}else{
 				var i, j, isSame = false;
